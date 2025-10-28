@@ -1,0 +1,107 @@
+/* 
+box-sizing: 盒模型；
+margin: 外边距；
+padding: 内边距；
+align-items: 交叉轴对齐方式；
+justify-content: 主轴对齐方式；
+border/border-radius: 边线以及转角；
+background-color: 背景色；
+*/
+
+* { /* 初始化清零 全局样式 */
+    margin: 0; /* 清除默认外边距 */
+    padding: 0; /* 清除默认内边距 */
+    box-sizing: border-box; /* 盒模型包含边框和内边距 */
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: sans-serif; /* 字体 */
+    display: flex; /* 弹性盒子布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    min-height: 100vh; /* 最小高度100%视口高度 */
+}
+
+.container { /* 人为定制class 要加点 */
+    background-color: #fff;
+    border-radius: 8px; /* 转角 */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* 阴影 */
+    max-width: 400px;
+    width: 100%; /* 适配不同设备，设置两个宽度 */
+    padding: 30px;
+    overflow: hidden; /* 超出部分隐藏 */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom:  1.2rem; /* rem 相对于根元素字体大小 */
+}
+
+.form-item {
+    margin-bottom: 20px;
+    position: relative; /* 相对定位，为了后续小标签定位 */
+}
+
+label {
+    display: block; /* 块级元素 */
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold; /* 字体加粗 */
+}
+
+input {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display:  block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none; /* 去掉默认蓝色边框 */
+    border-color: #6c63ff; /* 聚焦时边框颜色 */
+}
+
+small {
+    visibility: hidden; /* 默认隐藏 */
+    position: absolute; /* 绝对定位 */
+    bottom: -18px; /* 底部对齐 */
+    left: 0;
+    /* color: red; */
+    font-size: 12px;
+}
+
+button {
+    background-color: aqua; /* 按钮背景色 */
+    border: none;
+    color: white;
+    display: block; /* 块级元素 */
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    
+    cursor: pointer; /* 鼠标手型 */
+}
+
+button:hover {
+    background-color: #6c63ff; /* 鼠标悬停颜色 */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* 悬停阴影 */
+}
+
+/* 错误和成功状态样式 */
+.form-item.error input {
+    border-color: red; /* 错误时边框颜色 */
+}
+
+.form-item.success input {
+    border-color: #4caf50; /* 成功时边框颜色 */
+}
+
+.form-item.error small {
+    visibility: visible; /* 显示错误信息 */
+    color: red;
+}
