@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页作品集</title>
+    <link rel="stylesheet" href="style.css" class="css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1></i>计科2302 向玉鑫 网页作品集</h1>
+            <p>These are my web homeworks</p>
+        </header>
+
+        <div id="works" class="works-container">
+            <!-- work data -->
+            <div class="work" data-work-id="1" data-url="https://webwork1-register.vercel.app/">
+            <img src="./imgs/img_work1.png" alt="image of register">
+                <div class="work-info">
+                    <h3 class="work-title">Register</h3>
+                    <div class="work-describe">账户注册</div>
+                </div>
+            </div>
+
+            <div class="work" data-work-id="2" data-url="https://webwork2-todo.vercel.app/">
+            <img src="./imgs/img_work2.png" alt="image of todo">
+                <div class="work-info">
+                    <h3 class="work-title">ToDo</h3>
+                    <div class="work-describe">任务清单</div>
+                </div>
+            </div>
+
+            <div class="work" data-work-id="3" data-url="https://webwork3-quiz-3rva.vercel.app/">
+            <img src="./imgs/img_work3.png" alt="image of quiz">
+                <div class="work-info">
+                    <h3 class="work-title">Quiz</h3>
+                    <div class="work-describe">猜谜游戏</div>
+                </div>
+            </div>
+
+            <div class="work" data-work-id="4" data-url="https://webwork4-password-qyyz.vercel.app/">
+            <img src="./imgs/img_work4.png" alt="image of password">
+                <div class="work-info">
+                    <h3 class="work-title">Password</h3>
+                    <div class="work-describe">密码生成器</div>
+                </div>
+            </div>
+
+            <div class="work" data-work-id="5" data-url="https://webwork5-recipefinder.vercel.app/">
+            <img src="./imgs/img_work5.png" alt="image of recipeFinder">
+                <div class="work-info">
+                    <h3 class="work-title">RecipeFinder</h3>
+                    <div class="work-describe">菜谱查找</div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+    <script>
+        document.querySelectorAll('.work').forEach(card => {
+        card.addEventListener('click', function() {
+            const url = this.getAttribute('data-url');
+            if (url) window.open(url, '_blank');
+        });
+        });
+    </script>
+</body>
+
+<footer class="footer">
+    <a href="https://github.com/Joe8286312" target="_blank" class="github-link">
+        <svg class="github-logo" viewBox="0 0 24 24" width="22" height="22" fill="#b57cff" style="vertical-align: middle;">
+        <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.4-4-1.4-.5-1.2-1.3-1.5-1.3-1.5-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.7.9.1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.7a4.5 4.5 0 0 1 1.2-3.1c-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3a4.5 4.5 0 0 1 1.2 3.1c0 4.4-2.8 5.4-5.5 5.7.4.4.7 1 .7 2v3c0 .4.2.7.8.6A12 12 0 0 0 12 .3"/>
+        </svg>
+        <span>My GitHub: Joe8286312</span>
+    </a>
+    <span class="footer-repo">
+        | <a href="https://github.com/Joe8286312/webworks" target="_blank">webworks</a>
+    </span>
+</footer>
+</html>
